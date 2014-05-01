@@ -1,0 +1,13 @@
+*~
+server/vagrant/.vagrant
+tags
+node_modules/*
+
+## composer
+Plugin/*
+Vendor/*
+
+## CakePHP
+app/tmp/*
+!empty
+*.pot
