@@ -75,11 +75,11 @@ class UsersController extends AppController {
         }
 
         if (AuthComponent::user('id')) {
-            $this->redirect(array('controller' => 'voices', 'action' => 'index'));
+            $this->redirect(array('controller' => 'users', 'action' => 'index'));
         }
         if ($this->request->is('post')) {
             if ($this->Auth->login()) {
-                $this->redirect(array('controller' => 'voices', 'action' => 'index'));
+                $this->redirect(array('controller' => 'users', 'action' => 'index'));
             } else {
                 $this->Session->setFlash(
                     __('Username or password is incorrect'),
