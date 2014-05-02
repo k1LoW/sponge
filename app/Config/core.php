@@ -1,7 +1,6 @@
 <?php
 
 use AD7six\Dsn\Wrapper\CakePHP\CacheDsn;
-use AD7six\Dsn\Wrapper\CakePHP\LogDsn;
 
 /**
  * This is core configuration file.
@@ -340,7 +339,3 @@ Cache::config('default', CacheDsn::parse(env('CACHE_URL')));
 Cache::config('debug_kit', CacheDsn::parse(env('CACHE_DEBUG_KIT_URL')));
 Cache::config('_cake_core_', CacheDsn::parse(env('CACHE_CAKE_CORE_URL')));
 Cache::config('_cake_model_', CacheDsn::parse(env('CACHE_CAKE_MODEL_URL')));
-
-App::uses('CakeLog', 'Log');
-CakeLog::config('default', LogDsn::parse(env('LOG_URL')));
-CakeLog::config('error', LogDsn::parse(env('LOG_ERROR_URL')));
