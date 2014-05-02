@@ -1,35 +1,37 @@
 {
-  "name": "k1LoW/sponge",
-  "require": {
-    "php": "~5.4",
-    "cakephp/cakephp": "~2.4",
-    "composer/installers": "*",
-    "cakephp/debug_kit": "2.2.*",
-    "cakedc/migrations": "*",
-    "cakedc/search": "*",
-    "ichikaway/cakeplus": "2.0.*@dev",
-    "k1low/routine": "dev-master",
-    "k1low/escape": "2.0.*@dev",
-    "k1low/yav": "dev-master",
-    "k1low/yasd": "dev-master",
-    "k1low/yalog": "2.0.*@dev",
-    "k1low/exception": "dev-master",
-    "k1low/has_no": "2.0.*@dev",
-    "k1low/multivalidatable": "dev-master",
-    "k1low/setting": "dev-master",
-    "k1low/po": "2.0.*@dev",
-    "slywalker/boost_cake": "*",
-    "hiromi2424/transition": "dev-cake2",
-    "kozo/partial": "dev-2.0-PartialView",
-    "kaz29/file_fixture": "*",
-    "josegonzalez/dotenv": "0.1.*",
-    "ad7six/dsn": "0.1.*",
-    "nesbot/carbon": "*"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "~3.7"
-  },
-  "config": {
-    "vendor-dir": "Vendor/"
-  }
+    "name": "k1LoW/sponge",
+    "require": {
+        "php": "~5.4",
+        "cakephp/cakephp": "~2.4",
+        "composer/installers": "*",
+        "cakephp/debug_kit": "2.2.*",
+        "cakedc/migrations": "*",
+        "cakedc/search": "*",
+        "ichikaway/cakeplus": "2.0.*@dev",
+        "k1low/routine": "dev-master",
+        "k1low/escape": "2.0.*@dev",
+        "k1low/yav": "dev-master",
+        "k1low/yasd": "dev-master",
+        "k1low/yalog": "2.0.*@dev",
+        "k1low/exception": "dev-master",
+        "k1low/has_no": "2.0.*@dev",
+        "k1low/multivalidatable": "dev-master",
+        "k1low/setting": "dev-master",
+        "k1low/po": "2.0.*@dev",
+        "slywalker/boost_cake": "*",
+        "hiromi2424/transition": "dev-cake2",
+        "kozo/partial": "dev-2.0-PartialView",
+        "kaz29/file_fixture": "*",
+        "dotcake/dotcake": "dev-master",
+        "josegonzalez/dotenv": "0.1.*",
+        "ad7six/dsn": "0.1.*",
+        "nesbot/carbon": "*",
+        "ilya/belt": "1.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~3.7"
+    },
+    "config": {
+        "vendor-dir": "Vendor/"
+    }
 }
