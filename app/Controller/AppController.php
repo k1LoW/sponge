@@ -65,11 +65,9 @@ class AppController extends Controller {
 
         $baseUrl = Router::url('/');
         $fullBaseUrl = Router::url('/', true);
-        $title_for_layout = __('Sponge Cake');
         $this->set(compact(
             'baseUrl',
-            'fullBaseUrl',
-            'title_for_layout'
+            'fullBaseUrl'
         ));
     }
 }

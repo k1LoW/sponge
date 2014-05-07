@@ -18,21 +18,21 @@ spl_autoload_unregister(['App', 'load']);
 spl_autoload_register(['App', 'load'], true, true);
 
 if (!env('APP_NAME')) {
-	try {
-		josegonzalez\Dotenv\Loader::load([
-			'filepath' => __DIR__ . DS . '.env',
-			'toServer' => false,
-			'skipExisting' => ['toServer'],
-			'raiseExceptions' => false
-		]);
-	} catch (InvalidArgumentException $e) {
-		josegonzalez\Dotenv\Loader::load([
-			'filepath' => __DIR__ . DS . '.env.default',
-			'toServer' => false,
-			'skipExisting' => ['toServer'],
-			'raiseExceptions' => false
-		]);
-	}
+    try {
+        josegonzalez\Dotenv\Loader::load([
+            'filepath' => __DIR__ . DS . '.env',
+            'toServer' => false,
+            'skipExisting' => ['toServer'],
+            'raiseExceptions' => false
+        ]);
+    } catch (InvalidArgumentException $e) {
+        josegonzalez\Dotenv\Loader::load([
+            'filepath' => __DIR__ . DS . '.env.default',
+            'toServer' => false,
+            'skipExisting' => ['toServer'],
+            'raiseExceptions' => false
+        ]);
+    }
 }
 
 Configure::write('debug', (int)env('DEBUG'));
@@ -146,11 +146,11 @@ Configure::write('App.encoding', 'UTF-8');
  * Set to an array of prefixes you want to use in your application. Use for
  * admin or other prefixed routes.
  *
- * 	Routing.prefixes = array('admin', 'manager');
+ *  Routing.prefixes = array('admin', 'manager');
  *
  * Enables:
- *	`admin_index()` and `/admin/controller/index`
- *	`manager_index()` and `/manager/controller/index`
+ *  `admin_index()` and `/admin/controller/index`
+ *  `manager_index()` and `/manager/controller/index`
  *
  */
 //Configure::write('Routing.prefixes', array('admin'));
@@ -281,59 +281,59 @@ Configure::write('Acl.database', 'default');
  *
  * File storage engine.
  *
- * 	 Cache::config('default', array(
- *		'engine' => 'File', //[required]
- *		'duration' => 3600, //[optional]
- *		'probability' => 100, //[optional]
- * 		'path' => CACHE, //[optional] use system tmp directory - remember to use absolute path
- * 		'prefix' => 'cake_', //[optional]  prefix every cache file with this string
- * 		'lock' => false, //[optional]  use file locking
- * 		'serialize' => true, //[optional]
- * 		'mask' => 0664, //[optional]
- *	));
+ *   Cache::config('default', array(
+ *      'engine' => 'File', //[required]
+ *      'duration' => 3600, //[optional]
+ *      'probability' => 100, //[optional]
+ *      'path' => CACHE, //[optional] use system tmp directory - remember to use absolute path
+ *      'prefix' => 'cake_', //[optional]  prefix every cache file with this string
+ *      'lock' => false, //[optional]  use file locking
+ *      'serialize' => true, //[optional]
+ *      'mask' => 0664, //[optional]
+ *  ));
  *
  * APC (http://pecl.php.net/package/APC)
  *
- * 	 Cache::config('default', array(
- *		'engine' => 'Apc', //[required]
- *		'duration' => 3600, //[optional]
- *		'probability' => 100, //[optional]
- * 		'prefix' => Inflector::slug(APP_DIR) . '_', //[optional]  prefix every cache file with this string
- *	));
+ *   Cache::config('default', array(
+ *      'engine' => 'Apc', //[required]
+ *      'duration' => 3600, //[optional]
+ *      'probability' => 100, //[optional]
+ *      'prefix' => Inflector::slug(APP_DIR) . '_', //[optional]  prefix every cache file with this string
+ *  ));
  *
  * Xcache (http://xcache.lighttpd.net/)
  *
- * 	 Cache::config('default', array(
- *		'engine' => 'Xcache', //[required]
- *		'duration' => 3600, //[optional]
- *		'probability' => 100, //[optional]
- *		'prefix' => Inflector::slug(APP_DIR) . '_', //[optional] prefix every cache file with this string
- *		'user' => 'user', //user from xcache.admin.user settings
- *		'password' => 'password', //plaintext password (xcache.admin.pass)
- *	));
+ *   Cache::config('default', array(
+ *      'engine' => 'Xcache', //[required]
+ *      'duration' => 3600, //[optional]
+ *      'probability' => 100, //[optional]
+ *      'prefix' => Inflector::slug(APP_DIR) . '_', //[optional] prefix every cache file with this string
+ *      'user' => 'user', //user from xcache.admin.user settings
+ *      'password' => 'password', //plaintext password (xcache.admin.pass)
+ *  ));
  *
  * Memcache (http://www.danga.com/memcached/)
  *
- * 	 Cache::config('default', array(
- *		'engine' => 'Memcache', //[required]
- *		'duration' => 3600, //[optional]
- *		'probability' => 100, //[optional]
- * 		'prefix' => Inflector::slug(APP_DIR) . '_', //[optional]  prefix every cache file with this string
- * 		'servers' => array(
- * 			'127.0.0.1:11211' // localhost, default port 11211
- * 		), //[optional]
- * 		'persistent' => true, // [optional] set this to false for non-persistent connections
- * 		'compress' => false, // [optional] compress data in Memcache (slower, but uses less memory)
- *	));
+ *   Cache::config('default', array(
+ *      'engine' => 'Memcache', //[required]
+ *      'duration' => 3600, //[optional]
+ *      'probability' => 100, //[optional]
+ *      'prefix' => Inflector::slug(APP_DIR) . '_', //[optional]  prefix every cache file with this string
+ *      'servers' => array(
+ *          '127.0.0.1:11211' // localhost, default port 11211
+ *      ), //[optional]
+ *      'persistent' => true, // [optional] set this to false for non-persistent connections
+ *      'compress' => false, // [optional] compress data in Memcache (slower, but uses less memory)
+ *  ));
  *
  *  Wincache (http://php.net/wincache)
  *
- * 	 Cache::config('default', array(
- *		'engine' => 'Wincache', //[required]
- *		'duration' => 3600, //[optional]
- *		'probability' => 100, //[optional]
- *		'prefix' => Inflector::slug(APP_DIR) . '_', //[optional]  prefix every cache file with this string
- *	));
+ *   Cache::config('default', array(
+ *      'engine' => 'Wincache', //[required]
+ *      'duration' => 3600, //[optional]
+ *      'probability' => 100, //[optional]
+ *      'prefix' => Inflector::slug(APP_DIR) . '_', //[optional]  prefix every cache file with this string
+ *  ));
  */
 Cache::config('default', CacheDsn::parse(env('CACHE_URL')));
 Cache::config('debug_kit', CacheDsn::parse(env('CACHE_DEBUG_KIT_URL')));
