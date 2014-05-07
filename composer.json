@@ -1,5 +1,5 @@
 {
-    "name": "k1LoW/sponge",
+    "name": "k1low/sponge",
     "require": {
         "php": "~5.4",
         "cakephp/cakephp": "~2.4",
