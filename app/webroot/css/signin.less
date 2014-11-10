@@ -1,0 +1,63 @@
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.mixin-signin-form {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    webkit-box-sizing: border-box;
+    moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin .form-control {
+    .mixin-signin-form();
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.form-signup {
+    .form-signin();
+}
+.form-signup .form-control {
+    .mixin-signin-form();
+}
+.form-signup input {
+    margin-bottom: 10px;
+}
+
+.form-account {
+    .form-signin();
+}
+.form-account .form-control {
+    .mixin-signin-form();
+}
+.form-account input {
+    margin-bottom: 10px;
+}
+.form-account .checkbox {
+  margin-bottom: 20px;
+}
+.form-account .checkbox {
+  font-weight: normal;
+}
+
+.account {
+    .form-signin();
+ }
